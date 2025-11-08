@@ -1,7 +1,6 @@
 
-import './App.css'
 import Header from './components/Header'
-
+import Dashboard from './pages/Dashboard'
 function App() {
   
 
@@ -9,9 +8,7 @@ function App() {
     <>
       <div>
         <Header />
-        <main style={{ padding:"20px"}}>
-          <p>Bienvenue-commence a construire ton Client Tracker</p>
-        </main>
+        <Dashboard />
       </div>
       
     </>
