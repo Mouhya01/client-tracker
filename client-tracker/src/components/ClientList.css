@@ -1,0 +1,51 @@
+.client-list {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 1.5rem auto;
+}
+
+.client-list h3 {
+  text-align: center;
+  color: #333;
+}
+
+.client-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.client-card {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.client-card .status {
+  font-size: 0.9rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  text-transform: capitalize;
+  width: fit-content;
+}
+
+.status.prospect {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status.actif {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status.inactif {
+  background: #f8d7da;
+  color: #721c24;
+}
