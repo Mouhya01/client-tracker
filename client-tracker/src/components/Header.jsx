@@ -1,7 +1,18 @@
-export default function Header(){
-    return(
-        <header style={{ padding: "12px 20px",borderBottom:"1px solid #eee"}}>
-            <h1>Client Tracker</h1>
-        </header>
-    )
+import "./Header.css";
+
+function Header() {
+  return (
+    <header className="app-header">
+      <div className="logo">💼 Client Tracker</div>
+      <nav>
+        <ul>
+          <li><a href="#">Accueil</a></li>
+          <li><a href="#">Clients</a></li>
+          <li><a href="#">Statistiques</a></li>
+        </ul>
+      </nav>
+    </header>
+  );
 }
+
+export default Header;

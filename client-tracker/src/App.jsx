@@ -1,18 +1,11 @@
+import Dashboard from "./pages/Dashboard";
 
-import Header from './components/Header'
-import Dashboard from './pages/Dashboard'
 function App() {
-  
-
   return (
-    <>
-      <div>
-        <Header />
-        <Dashboard />
-      </div>
-      
-    </>
-  )
+    <div className="App">
+      <Dashboard />
+    </div>
+  );
 }
 
-export default App
+export default App;

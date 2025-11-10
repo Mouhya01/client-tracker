@@ -1,21 +1,32 @@
+import "./Dashboard.css";
 import { useState } from "react";
 import ClientForm from "../components/ClientForm";
 import ClientList from "../components/ClientList";
+import Header from "../components/Header";
 
 function Dashboard() {
-  // État global de la liste des clients
   const [clients, setClients] = useState([]);
 
-  // Fonction pour ajouter un client
   const addClient = (client) => {
-    setClients((prevClients) => [...prevClients, client]);
+    setClients((prev) => [...prev, client]);
   };
 
   return (
-    <main>
-      <ClientForm onAddClient={addClient} />
-      <ClientList clients={clients} />
-    </main>
+    <>
+      {/* Barre supérieure */}
+      <Header />
+
+      {/* Contenu principal du tableau de bord */}
+      <main className="dashboard-container">
+        <section className="form-section">
+          <ClientForm onAddClient={addClient} />
+        </section>
+
+        <section className="list-section">
+          <ClientList clients={clients} />
+        </section>
+      </main>
+    </>
   );
 }
 
