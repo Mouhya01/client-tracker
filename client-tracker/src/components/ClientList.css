@@ -2,50 +2,86 @@
   background: #fff;
   padding: 1rem;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
-  margin: 1.5rem auto;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.06);
 }
 
 .client-list h3 {
-  text-align: center;
-  color: #333;
+  margin: 0 0 10px 0;
+  color: #0f172a;
 }
 
-.client-list ul {
-  list-style: none;
-  padding: 0;
+.client-list .muted {
+  color: #64748b;
+  padding: 12px 0;
 }
 
 .client-card {
-  background: #f8f9fa;
-  border-radius: 10px;
-  padding: 0.8rem;
-  margin: 0.5rem 0;
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
+  gap: 8px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #f1f5f9;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
 }
 
-.client-card .status {
+.client-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(2,6,23,0.06);
+}
+
+.client-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.client-info .client-name {
+  font-size: 1rem;
+  display: block;
+}
+
+.client-meta {
+  display: flex;
+  gap: 8px;
   font-size: 0.9rem;
-  padding: 0.2rem 0.5rem;
-  border-radius: 6px;
+  color: #475569;
+}
+
+.status {
+  padding: 6px 8px;
+  border-radius: 8px;
+  font-size: 0.8rem;
   text-transform: capitalize;
-  width: fit-content;
 }
 
-.status.prospect {
-  background: #fff3cd;
-  color: #856404;
+.status.prospect { background: #fff7ed; color: #92400e; }
+.status.actif    { background: #ecfdf5; color: #065f46; }
+.status.inactif  { background: #fff1f2; color: #7f1d1d; }
+
+.client-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
 }
 
-.status.actif {
-  background: #d4edda;
-  color: #155724;
+.action {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
 }
 
-.status.inactif {
-  background: #f8d7da;
-  color: #721c24;
+.action.edit {
+  background: #e6fffa;
+  color: #056762;
+  border: 1px solid #bfeeea;
+}
+
+.action.delete {
+  background: #fff1f2;
+  color: #9f1239;
+  border: 1px solid #ffdbe0;
 }

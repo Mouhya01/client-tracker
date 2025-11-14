@@ -1,0 +1,61 @@
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(4, 6, 15, 0.45);
+  z-index: 60;
+}
+
+.modal-window {
+  background: #fff;
+  padding: 1.1rem;
+  border-radius: 10px;
+  width: 360px;
+  box-shadow: 0 10px 30px rgba(2,6,23,0.2);
+  animation: modalIn 180ms ease-out;
+}
+
+.modal-window h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.05rem;
+}
+
+.modal-window input,
+.modal-window select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 0.95rem;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: flex-end;
+}
+
+.save-btn {
+  background: #0ea5a4;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background: #f3f4f6;
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+@keyframes modalIn {
+  from { transform: translateY(-8px); opacity: 0 }
+  to   { transform: translateY(0); opacity: 1 }
+}
